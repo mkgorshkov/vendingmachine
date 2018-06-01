@@ -3,7 +3,10 @@ package com.mgorshkov.deltadna.dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
- 
+
+/**
+ * SessionUtil handles the hibernate session.
+ */
 public class SessionUtil {
     
     private static SessionUtil instance=new SessionUtil();
@@ -22,7 +25,6 @@ public class SessionUtil {
     
     public static Session getSession(){
         Session session =  getInstance().sessionFactory.openSession();
-        
         return session;
     }
 }
